@@ -1,10 +1,12 @@
 const express = require('express');
 const hbs = require('hbs');
 
+const port = process.env.PORT || 3000;
+
 var app = express();
 
-app.listen(3000, () => {
-    console.log('running on port 3000');
+app.listen(port, () => {
+    console.log(`running on port ${port}`);
 });
 
 hbs.registerPartials(__dirname + '/public/partials');;
